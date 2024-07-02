@@ -1,0 +1,117 @@
+.final-page-container {
+  margin: 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.download-button,
+.back-button {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover,
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.download-button svg,
+.back-button svg {
+  margin-right: 8px;
+}
+
+.change-image {
+  display: flex;
+  align-items: center;
+}
+
+.image-label input[type="file"] {
+  display: none;
+}
+
+.image-label label {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.image-label label:hover {
+  background-color: #218838;
+}
+
+.preview-container {
+  margin-top: 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-info {
+  margin-left: 20px;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contact-info {
+  margin-top: 10px;
+}
+
+.section-header {
+  margin-bottom: 10px;
+}
+
+.experience-item {
+  margin-bottom: 20px;
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+.education-item {
+  margin-bottom: 20px;
+}
+
+.education-item:last-child {
+  margin-bottom: 0;
+}
+
+.masteral-item {
+  margin-bottom: 20px;
+}
+
+.masteral-item:last-child {
+  margin-bottom: 0;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skill {
+  margin-bottom: 5px;
+}

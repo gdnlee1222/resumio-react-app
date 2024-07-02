@@ -1,0 +1,15 @@
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.image-logo img {
+  max-height: 70px;
+}

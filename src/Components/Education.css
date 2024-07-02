@@ -1,0 +1,63 @@
+.education-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.education-header {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.education-text {
+  font-size: 16px;
+  color: #666;
+}
+
+.education-section {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  margin-bottom: 10px;
+}
+
+.form-col {
+  margin-bottom: 10px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.delete-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: red;
+}
+
+.add-course-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-course-button:hover {
+  background-color: #0056b3;
+}

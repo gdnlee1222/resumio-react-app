@@ -1,0 +1,66 @@
+/* Custom styles for Skills component */
+.skills-holder {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.skills-h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.skills-description {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.skills-row {
+  display: flex;
+  align-items: center;
+}
+
+.skills-col-8 {
+  flex: 8;
+}
+
+.skills-col-2 {
+  flex: 2;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-label {
+  margin-left: 5px;
+}
+
+.delete-button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.add-skill-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-skill-button:hover,
+.delete-button:hover {
+  opacity: 0.8;
+}
