@@ -2,21 +2,24 @@
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.education{
-  padding: 20px;
-  background-color: white;
-  border-radius: 5px;
+  margin: 20px auto; /* Center align and add margin for spacing */
+  background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.education-title{
+.education {
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education-title {
   font-size: 25px;
 }
 
-.education-description{
+.education-description {
   font-size: 15px;
 }
 
@@ -76,4 +79,26 @@
 
 .add-course-button:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .education-container {
+    padding: 20px;
+    margin: 10px auto; /* Adjust margin for smaller screens */
+  }
+
+  .education {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-container {
+    padding: 15px;
+    margin: 5px auto; /* Further adjust margin for smaller screens */
+  }
+
+  .education {
+    padding: 15px;
+  }
 }

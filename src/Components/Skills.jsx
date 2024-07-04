@@ -30,22 +30,29 @@ const Skills = () => {
       <p>Add relevant professional key skills and proficiencies.</p>
       {skills.map((skill, index) => (
         <div key={index} className="skill-item">
-          <div>
-            <input
-              className="skill-input"
-              value={skill}
-              type="text"
-              onChange={(e) => handleChangeSkill(e, index)}
-            />
-            <label> Skill {index + 1}</label>
+          <div className="skills-row">
+            <div className="skills-col-8">
+              <label htmlFor={`skill${index + 1}`} className="form-label">
+                Skill {index + 1}:
+              </label>
+              <input
+                id={`skill${index + 1}`}
+                className="input-field skill-input"
+                value={skill}
+                type="text"
+                onChange={(e) => handleChangeSkill(e, index)}
+              />
+            </div>
+            <div className="skills-col-2">
+              <button
+                title="Delete Skill"
+                className="delete-button"
+                onClick={() => handleDeleteSkill(index)}
+              >
+                <FaTrash />
+              </button>
+            </div>
           </div>
-          <button
-            title="Delete Skill"
-            className="delete-button"
-            onClick={() => handleDeleteSkill(index)}
-          >
-            <FaTrash />
-          </button>
         </div>
       ))}
       <br />

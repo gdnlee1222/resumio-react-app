@@ -2,14 +2,16 @@
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #f9f9f9; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; /* Center align and add margin for spacing */
 }
 
-.skills-container{
+.skills-container {
   border: 1px solid #e0e0e0;
   padding: 10px;
   border-radius: 5px;
+  margin-top: 20px;
 }
 
 .skills-h2 {
@@ -37,6 +39,7 @@
 
 .skills-col-2 {
   flex: 2;
+  margin-top: 20px;
 }
 
 .input-field {
@@ -47,12 +50,12 @@
 }
 
 .skill-input {
-  width: 200px; 
+  width: 200px;
   padding: 8px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
 }
 
 .form-label {
@@ -76,7 +79,7 @@
   padding: 8px;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 10px; 
+  margin-left: 10px;
 }
 
 .new-skill-input {
@@ -91,4 +94,18 @@
 .add-skill-button:hover,
 .delete-button:hover {
   opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .skills-holder {
+    padding: 20px;
+    margin: 10px auto; 
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-holder {
+    padding: 15px;
+    margin: 5px auto;
+  }
 }

@@ -4,7 +4,7 @@
   border-radius: 8px;
   background-color: #f9f9f9;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto; /* Center align and add margin for spacing */
 }
 
 .professional-experience-header {
@@ -84,4 +84,18 @@
   padding: 10px 15px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .professional-experience {
+    padding: 20px;
+    margin: 10px auto; 
+  }
+}
+
+@media (max-width: 480px) {
+  .professional-experience {
+    padding: 15px;
+    margin: 5px auto; 
+  }
 }

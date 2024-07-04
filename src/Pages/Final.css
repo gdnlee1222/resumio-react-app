@@ -1,3 +1,10 @@
+#root {
+  background-image: url("/src/assets/resumio-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 @page {
   size: A4;
   margin: 10mm;
@@ -7,24 +14,24 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 .final-page-container {
   width: 100%;
-  max-width: 210mm; 
+  max-width: 210mm;
   height: auto;
-  font-family: "Poppins", sans-serif;
   padding: 20px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding-bottom: 80px; 
+  padding-bottom: 80px;
 }
 
 .preview-container {
-  background-color: #fff;
+  background-color: #8e95b6;
   padding: 10px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border: 1px solid #f5f5f5;
+  border-radius: 2px;
   margin-bottom: 10px;
 }
 
@@ -32,6 +39,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
 .image-container {
@@ -47,11 +55,12 @@ body {
 
 .header-info {
   flex: 1;
+  min-width: 200px;
 }
 
 .contact-info {
   font-size: 12px;
-  color: #666;
+  color: #1f1b1b;
 }
 
 .profile-container {
@@ -73,7 +82,6 @@ body {
   padding: 10px;
   border-radius: 8px;
   background-color: #fff;
-  box-sizing: border-box;
 }
 
 .experience-item {
@@ -98,7 +106,6 @@ body {
   padding: 10px;
   border-radius: 8px;
   background-color: #fff;
-  box-sizing: border-box;
 }
 
 .education-item {
@@ -123,7 +130,6 @@ body {
   padding: 10px;
   border-radius: 8px;
   background-color: #fff;
-  box-sizing: border-box;
 }
 
 .skills-list {
@@ -164,19 +170,70 @@ body {
 }
 
 @media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin-top: 10px;
+  }
+
   .controls {
     flex-direction: column;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
   }
 
   .download-button,
   .back-button {
     width: 100%;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
   }
 
   .final-page-container {
-    padding-bottom: 100px; 
+    padding-bottom: 100px;
+  }
+
+  .profile-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .experience-container,
+  .education-container,
+  .skills-container {
+    padding: 10px 5px;
+  }
+
+  .profile-container {
+    padding: 10px 5px;
+  }
+
+  .experience-item,
+  .education-item {
+    margin-bottom: 5px;
+  }
+
+  .section-header {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+  }
+
+  .skills-list .skill {
+    padding: 5px 8px;
+  }
+}
+
+@media print {
+  body {
+    font-family: Arial, sans-serif; /* Change font to Arial for print */
+  }
+
+  .download-button,
+  .back-button {
+    display: none; 
   }
 }
