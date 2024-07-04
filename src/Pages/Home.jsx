@@ -17,9 +17,6 @@ const Home = () => {
     navigate('/'); // Navigate to the default home page
   };
 
-  console.log("Current Page:", currentPage); // Check current page in console
-
-
   const handleBack = () => {
     const pages = ["basicinfo", "profile", "experience", "education", "skills"];
     const currentIndex = pages.indexOf(currentPage);
@@ -31,13 +28,21 @@ const Home = () => {
   const handleContinue = () => {
     const pages = ["basicinfo", "profile", "experience", "education", "skills"];
     const currentIndex = pages.indexOf(currentPage);
-    if (currentPage === "basicinfo" && image === "") {
-      alert("Please upload your image before continuing.");
-      return;
+
+    if (currentPage === "basicinfo") {
+      if (!basicInfo.name || !basicInfo.email || !basicInfo.phone || !image) {
+        alert("Please fill out your Full Name, Email, Phone, and upload your image before continuing.");
+        return;
+      }
     }
+
     if (currentIndex < pages.length - 1) {
       dispatch({ type: "SET_CURRENT_PAGE", payload: pages[currentIndex + 1] });
     } else {
+      if (!basicInfo.name || !basicInfo.email || !basicInfo.phone || !image) {
+        alert("You cannot print the resume unless all required fields are filled out properly.");
+        return;
+      }
       navigate("/final");
     }
   };

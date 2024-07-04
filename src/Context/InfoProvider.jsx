@@ -1,30 +1,27 @@
 import React, { createContext, useReducer, useContext } from "react";
 
-// Create context
 const InfoContext = createContext();
 
-// Initial state
 const initialState = {
   basicInfo: {
-    name: "Your Name",
-    profession: "Occupation",
-    address: "1234 Your Address",
-    barangay: "N/A",
-    city: "Metro Manila",
-    zip: "1234",
-    email: "your@email.com",
-    phone: "1234-567-8910",
+    name: "",
+    profession: "",
+    address: "",
+    barangay: "",
+    city: "",
+    zip: "",
+    email: "",
+    phone: "",
   },
   profile: "",
   experience: [],
-  education: {},
+  education: [],
   skills: [],
   image: "", // Add image state
   newEducation: [],
   currentPage: "basicinfo", // Add currentPage state
 };
 
-// Reducer function
 const reducer = (state, action) => {
   switch (action.type) {
     case "SET_BASIC_INFO":
@@ -38,20 +35,14 @@ const reducer = (state, action) => {
     case "SET_EDUCATION":
       return { ...state, education: action.payload };
     case "ADD_SKILL":
-      return {
-        ...state,
-        skills: [...state.skills, action.payload], // Add new skill to the skills array
-      };
+      return { ...state, skills: [...state.skills, action.payload] }; // Add new skill to the skills array
     case "DELETE_SKILL":
       return {
         ...state,
-        skills: state.skills.filter((skill) => skill !== action.payload), // Remove skill from the skills array
+        skills: state.skills.filter((_, index) => index !== action.payload), // Remove skill from the skills array
       };
     case "UPDATE_SKILLS":
-      return {
-        ...state,
-        skills: action.payload, // Update skills array
-      };
+      return { ...state, skills: action.payload }; // Update skills array
     case "SET_NEW_EDUCATION":
       return { ...state, newEducation: action.payload };
     case "SET_CURRENT_PAGE":
@@ -61,16 +52,23 @@ const reducer = (state, action) => {
   }
 };
 
-// InfoProvider component
 export const InfoProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  const validateBasicInfo = () => {
+    const { name, email, phone } = state.basicInfo;
+    if (!name || !email || !phone) {
+      alert("Please fill out all required fields: Full Name, Email, and Phone.");
+      return false;
+    }
+    return true;
+  };
+
   return (
-    <InfoContext.Provider value={{ ...state, dispatch }}>
+    <InfoContext.Provider value={{ ...state, dispatch, validateBasicInfo }}>
       {children}
     </InfoContext.Provider>
   );
 };
 
-// Custom hook to use InfoContext
 export const useBasicInfo = () => useContext(InfoContext);

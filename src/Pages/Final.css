@@ -1,110 +1,129 @@
+@page {
+  size: A4;
+  margin: 10mm;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .final-page-container {
-  margin: 20px;
-}
-
-.controls {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.download-button,
-.back-button {
-  display: flex;
-  align-items: center;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.download-button:hover,
-.back-button:hover {
-  background-color: #0056b3;
-}
-
-.download-button svg,
-.back-button svg {
-  margin-right: 8px;
-}
-
-.change-image {
-  display: flex;
-  align-items: center;
-}
-
-.image-label input[type="file"] {
-  display: none;
-}
-
-.image-label label {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #28a745;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.image-label label:hover {
-  background-color: #218838;
+  width: 100%;
+  max-width: 210mm; 
+  height: auto;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-bottom: 80px; 
 }
 
 .preview-container {
-  margin-top: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.header-info {
-  margin-left: 20px;
+.image-container {
+  margin-right: 10px;
 }
 
 .profile-image {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.contact-info {
-  margin-top: 10px;
+.header-info {
+  flex: 1;
 }
 
-.section-header {
+.contact-info {
+  font-size: 12px;
+  color: #666;
+}
+
+.profile-container {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
   margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.profile-text {
+  white-space: pre-wrap;
+}
+
+.experience-container,
+.professional-experience {
+  margin-bottom: 10px;
+  border: 1px solid #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-sizing: border-box;
 }
 
 .experience-item {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.experience-item:last-child {
-  margin-bottom: 0;
+.experience-item .position {
+  font-weight: bold;
+}
+
+.experience-item .company-year {
+  color: #666;
+}
+
+.experience-item .description {
+  color: #333;
+}
+
+.education-container {
+  margin-bottom: 10px;
+  border: 1px solid #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-sizing: border-box;
 }
 
 .education-item {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.education-item:last-child {
-  margin-bottom: 0;
+.education-item .school {
+  font-weight: bold;
 }
 
-.masteral-item {
-  margin-bottom: 20px;
+.education-item .school-details {
+  color: #666;
 }
 
-.masteral-item:last-child {
-  margin-bottom: 0;
+.education-item .degree {
+  margin-top: 5px;
+}
+
+.skills-container {
+  margin-bottom: 10px;
+  border: 1px solid #f0f0f0;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-sizing: border-box;
 }
 
 .skills-list {
@@ -112,6 +131,52 @@
   padding: 0;
 }
 
-.skill {
+.skills-list .skill {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
   margin-bottom: 5px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.download-button,
+.back-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.download-button:hover,
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+  }
+
+  .download-button,
+  .back-button {
+    width: 100%;
+    margin-bottom: 10px; 
+  }
+
+  .final-page-container {
+    padding-bottom: 100px; 
+  }
 }

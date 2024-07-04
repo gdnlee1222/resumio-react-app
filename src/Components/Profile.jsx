@@ -12,7 +12,7 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-      <h2>Objective</h2>
+      <h2>Profile</h2>
       <p>Featuring a professional summary introduces you to hiring managers.</p>
       <textarea
         value={profile}

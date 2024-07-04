@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useBasicInfo } from "../Context/InfoProvider";
 import { FaSquarePlus, FaTrash } from "react-icons/fa6";
 import "./Education.css"; // Import external CSS file
@@ -8,9 +8,9 @@ const Education = () => {
 
   const handleInputChange = (e, eduIndex) => {
     const { name, value } = e.target;
-    const updatedEducation = education.map((edu, index) => (
+    const updatedEducation = education.map((edu, index) =>
       index === eduIndex ? { ...edu, [name]: value } : edu
-    ));
+    );
     dispatch({ type: "SET_EDUCATION", payload: updatedEducation });
   };
 
@@ -33,6 +33,13 @@ const Education = () => {
     const updatedEducation = education.filter((_, eduIndex) => eduIndex !== index);
     dispatch({ type: "SET_EDUCATION", payload: updatedEducation });
   };
+
+  // Ensure at least one form is visible on initial render
+  useEffect(() => {
+    if (education.length === 0) {
+      addEducation(); // Add an initial empty education form
+    }
+  }, []);
 
   return (
     <div className="education">
@@ -117,11 +124,11 @@ const Education = () => {
                   className="input-field"
                   id={`degree-${index}`}
                   name="degree"
-                  placeholder="Degree eg:- B-Tech , BCA"
+                  placeholder="Degree"
                   value={edu.degree}
                 />
                 <label htmlFor={`degree-${index}`} className="input-label">
-                  Degree eg:- B-Tech , BCA
+                  Degree
                 </label>
               </div>
               <div className="form-group">

@@ -1,63 +1,40 @@
-.preview {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+.profile-container {
+  margin: 20px;
   padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff
 }
 
-.profile-image {
-  width: 150px;
-}
-
-.profile-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-
-.basic-info-preview {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-}
-
-.basic-info-preview p {
-  margin-bottom: 5px;
-}
-
-.profile-preview,
-.education-preview,
-.experience-preview,
-.skills-preview {
-  margin-bottom: 30px;
-}
-
-
-.profile-preview h2,
-.education-preview h2,
-.experience-preview h2,
-.skills-preview h2 {
-  font-size: 20px;
-  font-weight: bold;
+.profile-container h2 {
+  font-size: 1.5em;
+  color: #333;
   margin-bottom: 10px;
 }
 
-.profile-preview p,
-.education-preview p,
-.experience-preview p,
-.skills-preview li {
-  margin-bottom: 5px;
-}
-
-.education-item-preview,
-.experience-item-preview {
-  border: 1px solid #ddd;
-  padding: 10px;
+.profile-container p {
+  font-size: 1em;
+  color: #666;
   margin-bottom: 20px;
-  border-radius: 5px;
 }
 
-.education-item-preview h3,
-.experience-item-preview h3 {
-  margin-top: 0;
+.profile-container textarea {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.5em;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.profile-container textarea::placeholder {
+  color: #aaa;
+}
+
+.profile-container textarea:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
 }

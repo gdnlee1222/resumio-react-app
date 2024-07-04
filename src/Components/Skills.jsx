@@ -15,7 +15,7 @@ const Skills = () => {
   };
 
   const handleDeleteSkill = (index) => {
-    dispatch({ type: "DELETE_SKILL", payload: skills[index] });
+    dispatch({ type: "DELETE_SKILL", payload: index });
   };
 
   const handleChangeSkill = (e, index) => {
@@ -25,13 +25,14 @@ const Skills = () => {
   };
 
   return (
-    <div>
+    <div className="skills-container">
       <h2>Key Skills</h2>
       <p>Add relevant professional key skills and proficiencies.</p>
       {skills.map((skill, index) => (
-        <div key={index}>
+        <div key={index} className="skill-item">
           <div>
             <input
+              className="skill-input"
               value={skill}
               type="text"
               onChange={(e) => handleChangeSkill(e, index)}
@@ -48,15 +49,22 @@ const Skills = () => {
         </div>
       ))}
       <br />
-      <input
-        type="text"
-        value={newSkill}
-        onChange={(e) => setNewSkill(e.target.value)}
-        placeholder="Add new skill"
-      />
-      <button title="Add More Skills?" onClick={handleAddSkill}>
-        <FaPlusSquare />
-      </button>
+      <div className="add-skill-container">
+        <input
+          className="new-skill-input"
+          type="text"
+          value={newSkill}
+          onChange={(e) => setNewSkill(e.target.value)}
+          placeholder="Add new skill"
+        />
+        <button
+          className="add-skill-button"
+          title="Add More Skills?"
+          onClick={handleAddSkill}
+        >
+          <FaPlusSquare />
+        </button>
+      </div>
     </div>
   );
 };

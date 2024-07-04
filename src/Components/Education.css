@@ -5,13 +5,28 @@
   margin-bottom: 20px;
 }
 
+.education{
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education-title{
+  font-size: 25px;
+}
+
+.education-description{
+  font-size: 15px;
+}
+
 .education-header {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
 .education-text {
-  font-size: 16px;
+  font-size: 13px;
   color: #666;
 }
 
@@ -30,13 +45,13 @@
 .input-field {
   width: 100%;
   padding: 8px;
-  font-size: 14px;
+  font-size: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 .label {
-  font-size: 14px;
+  font-size: 10px;
   color: #333;
   margin-bottom: 5px;
 }
@@ -46,6 +61,7 @@
   border: none;
   cursor: pointer;
   color: red;
+  margin-left: 10px;
 }
 
 .add-course-button {

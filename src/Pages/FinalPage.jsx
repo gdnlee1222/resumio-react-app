@@ -18,25 +18,6 @@ const FinalPage = () => {
   return (
     <div className="final-page-container">
       <h5>Final Preview</h5>
-      <div className="controls">
-        <div>
-          <ReactToPrint
-            trigger={() => (
-              <button className="download-button">
-                <RiDownload2Line />
-                Download
-              </button>
-            )}
-            content={() => componentRef.current}
-          />
-        </div>
-        <div>
-          <button onClick={handleBack} className="back-button">
-            <RiArrowLeftLine />
-            Back
-          </button>
-        </div>
-      </div>
       <div ref={componentRef} className="preview-container">
         {/* Header */}
         <div className="header-container">
@@ -59,6 +40,7 @@ const FinalPage = () => {
 
         {/* Profile */}
         <div className="profile-container">
+          <h2 className="section-header">Profile</h2>
           <p className="profile-text">{profile}</p>
         </div>
 
@@ -115,6 +97,27 @@ const FinalPage = () => {
               <li key={index} className="skill">{skill}</li>
             ))}
           </ul>
+        </div>
+      </div>
+
+      {/* Buttons outside the preview container */}
+      <div className="controls">
+        <div>
+          <ReactToPrint
+            trigger={() => (
+              <button className="download-button">
+                <RiDownload2Line />
+                Download
+              </button>
+            )}
+            content={() => componentRef.current}
+          />
+        </div>
+        <div>
+          <button onClick={handleBack} className="back-button">
+            <RiArrowLeftLine />
+            Back
+          </button>
         </div>
       </div>
     </div>

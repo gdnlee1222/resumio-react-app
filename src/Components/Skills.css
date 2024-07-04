@@ -1,7 +1,14 @@
-/* Custom styles for Skills component */
 .skills-holder {
   padding: 20px;
   border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /
+}
+
+.skills-container{
+  border: 1px solid #e0e0e0;
+  padding: 10px;
   border-radius: 5px;
 }
 
@@ -25,7 +32,7 @@
 }
 
 .skills-col-8 {
-  flex: 8;
+  flex: 1;
 }
 
 .skills-col-2 {
@@ -39,6 +46,15 @@
   border-radius: 5px;
 }
 
+.skill-input {
+  width: 200px; 
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 5px; 
+}
+
 .form-label {
   margin-left: 5px;
 }
@@ -49,15 +65,27 @@
   border: none;
   padding: 8px;
   border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 3px;
 }
 
 .add-skill-button {
-  background-color: #007bff;
+  background-color: #1eb909;
   color: #fff;
   border: none;
   padding: 8px;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 10px; 
+}
+
+.new-skill-input {
+  width: 200px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .add-skill-button:hover,

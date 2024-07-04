@@ -8,9 +8,9 @@ const Experience = () => {
 
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
-    const updatedExperience = experience.map((exp, expIndex) => (
+    const updatedExperience = experience.map((exp, expIndex) =>
       expIndex === index ? { ...exp, [name]: value } : exp
-    ));
+    );
     dispatch({ type: "SET_EXPERIENCE", payload: updatedExperience });
   };
 
@@ -23,6 +23,11 @@ const Experience = () => {
     const updatedExperience = experience.filter((_, expIndex) => expIndex !== index);
     dispatch({ type: "SET_EXPERIENCE", payload: updatedExperience });
   };
+
+  // Ensure at least one form is visible on initial render
+  if (experience.length === 0) {
+    addExperience(); // Add an initial empty experience form
+  }
 
   return (
     <div className="professional-experience">
