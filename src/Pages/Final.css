@@ -1,4 +1,8 @@
 #root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
   background-image: url("/src/assets/resumio-bg.png");
   background-size: cover;
   background-position: center;
@@ -28,7 +32,7 @@ body {
 }
 
 .preview-container {
-  background-color: #8e95b6;
+  background-color: #fff;
   padding: 10px;
   border: 1px solid #f5f5f5;
   border-radius: 2px;
@@ -66,7 +70,7 @@ body {
 .profile-container {
   padding: 10px;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 2px;
   margin-bottom: 10px;
   background-color: #fff;
 }
@@ -78,14 +82,15 @@ body {
 .experience-container,
 .professional-experience {
   margin-bottom: 10px;
-  border: 1px solid #f0f0f0;
+  border:  1px solid #e7d8d8;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 2px;
   background-color: #fff;
 }
 
 .experience-item {
   margin-bottom: 10px;
+  border: none;
 }
 
 .experience-item .position {
@@ -102,9 +107,9 @@ body {
 
 .education-container {
   margin-bottom: 10px;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #e7d8d8;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 2px;
   background-color: #fff;
 }
 
@@ -126,9 +131,9 @@ body {
 
 .skills-container {
   margin-bottom: 10px;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #e7d8d8;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 2px;
   background-color: #fff;
 }
 
@@ -232,8 +237,35 @@ body {
     font-family: Arial, sans-serif; /* Change font to Arial for print */
   }
 
-  .download-button,
-  .back-button {
+  /* Apply font size and other styles for sections */
+  .final-page-container,
+  .preview-container,
+  .header-container,
+  .profile-container,
+  .experience-container,
+  .education-container,
+  .skills-container {
+    font-size: 10pt; 
+  }
+
+  .controls {
     display: none; 
+  }
+
+  .header-info {
+    min-width: 150px; 
+  }
+
+  .profile-image {
+    width: 60px; 
+    height: 60px;
+  }
+
+  .section-header {
+    font-size: 1em; 
+  }
+
+  .skills-list .skill {
+    padding: 5px 8px; 
   }
 }

@@ -31,15 +31,18 @@
 .skills-row {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .skills-col-8 {
   flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 .skills-col-2 {
-  flex: 2;
-  margin-top: 20px;
+  flex-shrink: 0;
+  margin-left: 10px;
 }
 
 .input-field {
@@ -50,16 +53,17 @@
 }
 
 .skill-input {
-  width: 200px;
+  width: 250px; /* Fixed width to avoid squeezing */
   padding: 8px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 5px;
+  margin-right: 10px;
 }
 
 .form-label {
   margin-left: 5px;
+  margin-right: 20px;
 }
 
 .delete-button {
@@ -69,7 +73,6 @@
   padding: 8px;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 3px;
 }
 
 .add-skill-button {
@@ -83,12 +86,18 @@
 }
 
 .new-skill-input {
-  width: 200px;
+  width: 250px; /* Ensure input field expands to full width */
   padding: 8px;
   font-size: 14px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-skill-row {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .add-skill-button:hover,
@@ -101,11 +110,66 @@
     padding: 20px;
     margin: 10px auto; 
   }
+
+  .skills-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills-col-8,
+  .skills-col-2 {
+    width: 100%;
+    margin: 0;
+  }
+
+  .skill-input {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .delete-button,
+  .add-skill-button {
+    width: auto; /* Allow buttons to be their natural width */
+    margin-left: 10px; /* Add margin for spacing */
+  }
+
+  .add-skill-row {
+    flex-direction: row; /* Align buttons horizontally */
+    align-items: center;
+  }
+
+  .new-skill-input {
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 480px) {
   .skills-holder {
     padding: 15px;
     margin: 5px auto;
+  }
+
+  .skill-input,
+  .new-skill-input {
+    width: 100%; /* Ensure input fields expand to full width */
+    margin-bottom: 10px;
+  }
+
+  .delete-button,
+  .add-skill-button {
+    width: auto; /* Ensure buttons remain inline */
+    margin-left: 5px; /* Adjust margin for smaller screens */
+  }
+
+  .add-skill-row {
+    flex-direction: row; /* Keep buttons in a row */
+    align-items: center;
+  }
+
+  .new-skill-input {
+    width: calc(80% - 20px); /* Adjust width to account for padding */
+    margin-bottom: 10px;
   }
 }
